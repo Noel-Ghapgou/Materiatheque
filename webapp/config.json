@@ -1,0 +1,17 @@
+{
+    "baseUrl": "/",
+    "appInfos": {
+        "app": "LAS",
+        "version": "7.6",
+        "pageTitle": "LAS 7.6",
+        "productTitle1": "Logical",
+        "productTitle2": "Access",
+        "productInfo": "a brand of New Access group"
+    },
+    "search": {
+        "searchUrl": "{serviceRootUrl}search",
+    },
+    "page": {
+        "search": "{baseUrl}search",
+    }
+}
