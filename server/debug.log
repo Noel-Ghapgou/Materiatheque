@@ -1,0 +1,5 @@
+[2014-05-21 12:26:22.171] [INFO] [default] - Http server listening on port 8000
+[2014-05-21 12:27:00.110] [DEBUG] [default] - 127.0.0.1 - - "GET / HTTP/1.1" 500 1055 "" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36"
+[2014-05-21 12:27:00.152] [DEBUG] [default] - 127.0.0.1 - - "GET /favicon.ico HTTP/1.1" 500 1055 "" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36"
+[2014-05-21 12:27:51.930] [DEBUG] [default] - 127.0.0.1 - - "GET / HTTP/1.1" 200 - "" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36"
+[2014-05-21 12:27:51.950] [DEBUG] [default] - 127.0.0.1 - - "GET /favicon.ico HTTP/1.1" 200 0 "" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36"
