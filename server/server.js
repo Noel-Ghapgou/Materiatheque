@@ -48,6 +48,19 @@ function initSocketIO(httpServer)
             try {
                 switch(params.request)
                 {
+                    case 'search':
+                        params.status = 'ok';
+                        params.data = [{
+                            id : 1,
+                            desc : "toto"
+                        }, {
+                            id : 2,
+                            desc : "tata"
+                        }, {
+                            id : 3,
+                            desc : "titi"
+                        }];
+                        break;
 
                     default:
                         throw "Not implemented request " + params.request;

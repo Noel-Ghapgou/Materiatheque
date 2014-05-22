@@ -1,7 +1,7 @@
-define(['angular'], function(angular)
+define(['angular', 'socketProvider'], function(angular)
 {
-    angular.module('proxyServices', []).service('proxyService', ['$http', '$q', '$cacheFactory', '$window', '$rootScope',
-    function($http, $q, $cacheFactory, $window, $rootScope)
+    angular.module('proxyServices', ['socketProvider']).service('proxyService', ['$http', '$q', '$cacheFactory', 'socket', '$rootScope',
+    function($http, $q, $cacheFactory, socket, $rootScope)
     {
         // This is the extent of $cacheFactory's configuration
         var metaCache = $cacheFactory('metaCache', {
@@ -9,66 +9,67 @@ define(['angular'], function(angular)
             capacity : 1000
         });
 
-        return function(config)
+        socket.on('response', function(receivedData)
+        {
+            var result = receivedData.result;
+            if (result.status == 'ok') {
+                if (result.cachekey) {
+                    // Update cache
+                    if (result.mode == 'update') {
+                        var datas = metaCache.get(result.cachekey);
+                        datas.push(result.data);
+                        metaCache.put(result.cachekey, datas);
+                        result.data = datas;
+                    }
+                    else {
+                        metaCache.put(result.cachekey, result.data);
+                    }
+                }
+                $rootScope.$emit('response', result);
+            }
+            else {
+                $rootScope.$emit('error', result);
+            }
+        });
+
+        return function(params)
         {
             var deferred = $q.defer();
 
-            config.data = config.data || {};
-            config.xhrFields = {
-                withCredentials : true
-            };
-            config.headers = {
-                "session-id" : $window.sessionStorage.token
-            };
+            params.data = params.data || {};
 
-            var cachekey = (config.cachekey || config.cached) && config.url + (config.cachekey || '*');
-            var tracker = config.tracker;
+            var cachekey = params.cachekey;
             var data = cachekey && metaCache.get(cachekey);
             if (data) {
+                if (params.method == 'post') {
+                    params.data = data;
+                    $rootScope.$emit('response', params);
+                }
                 deferred.resolve(data);
             }
             else {
-                $http(config).error(function(data, status, headers, config)
-                {
-                    tracker && promiseTracker(tracker).cancel();
-
-                    if (status == 401)// Unauthorized
+                if (!params.method || params.method == 'post') {
+                    socket.emit('request', params);
+                }
+                else {
+                    socket.emit('request', params, function(result)
                     {
-                        delete $window.sessionStorage.token;
-                    }
+                        if (result.status == 'ok') {
+                            if (cachekey) {
+                                metaCache.put(cachekey, result.data);
+                            }
 
-                    if (!angular.isDefined(config.broadcastError) || config.broadcastError) {
-                        $rootScope.$broadcast('event:request-error', {
-                            response : data,
-                            status : status,
-                            config : config
-                        });
-                    }
-                    
-                    deferred.reject({
-                        data : data,
-                        status : status,
-                        headers : headers,
-                        config : config
+                            deferred.resolve(result.data, result.status, result.headers, params);
+                        }
+                        else {
+                            deferred.reject(result, result.status, result.headers, params);
+                        }
                     });
-                }).success(function(data, status, headers, config)
-                {
-                    var headerSessionId = headers('session-id');
-                    if (headerSessionId == '@DEL@') {
-                        delete $window.sessionStorage.token;
-                    }
-                    else if (headerSessionId) {
-                        $window.sessionStorage.token = headerSessionId;
-                    }
-                    if (cachekey) {
-                        metaCache.put(cachekey, data);
-                    }
-
-                    deferred.resolve(data, status, headers, config);
-                });
+                }
             }
 
             return deferred.promise;
         };
     }]);
 });
+

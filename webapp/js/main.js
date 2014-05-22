@@ -27,6 +27,7 @@ $.getJSON('config.json', function(json)
             app : 'js/app',
             routes : 'js/routes',
             routeResolver : 'js/providers/route-resolver',
+            socketProvider : 'js/providers/socket-provider',
             searchController : 'js/controllers/search-controller',
             proxyService : 'js/services/proxy-service',
             searchService : 'js/services/search-service',

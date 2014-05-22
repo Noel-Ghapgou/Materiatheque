@@ -1,3 +1,3 @@
 cd server
-node-debug app.js
+call node-debug app.js
 pause

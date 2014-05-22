@@ -7,14 +7,11 @@ define(['app'], function(app)
         return {
             search : function(query)
             {
-                var searchRequest = {
-                    query : query
-                };
-
                 return proxyService({
-                    method : 'post',
-                    url : config.search.searchUrl,
-                    data : searchRequest,
+                    method : 'get',
+                    cachekey : 'search',
+                    request : 'search',
+                    query: query,
                 });
             },
         };
