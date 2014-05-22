@@ -1,17 +1,18 @@
 {
-    "baseUrl": "/",
-    "appInfos": {
-        "app": "LAS",
-        "version": "7.6",
-        "pageTitle": "LAS 7.6",
-        "productTitle1": "Logical",
-        "productTitle2": "Access",
-        "productInfo": "a brand of New Access group"
-    },
-    "search": {
-        "searchUrl": "{serviceRootUrl}search",
-    },
-    "page": {
-        "search": "{baseUrl}search",
-    }
+	"baseUrl": "/",
+	"serviceRootUrl": "http://localhost:8000",
+	"appInfos": {
+		"app": "MAT",
+		"version": "0.1",
+		"pageTitle": "MAT 0.1",
+		"productTitle1": "",
+		"productTitle2": "",
+		"productInfo": ""
+	},
+	"search": {
+		"searchUrl": "{serviceRootUrl}search"
+	},
+	"page": {
+		"search": "{baseUrl}search"
+	}
 }

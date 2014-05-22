@@ -1,0 +1,131 @@
+.lasApp .multiselect
+{
+  color: @foreColor;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  background-color: @inactiveBackgroundColor;
+  overflow: hidden;
+  border: 1px solid @inactiveBorderColor;
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1em;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+  .black-shadow;
+  box-sizing: border-box;
+}
+
+.lasApp .multiselect.multiselect-active{
+  border-color: @activeBorderColor;
+  background-color: @activeBackgroundColor;
+  .transition(background-color ease 0.5s);
+}
+
+.lasApp .multiselect.readonly
+{
+  color: rgba(255,255,255,.2); 
+}
+
+.lasApp .multiselect input,
+.lasApp .multiselect .placeHolder,
+.lasApp .multiselect #textmeasure
+{
+  background-color: transparent !important;
+  flex: auto;
+  border: 0px;
+  z-index: 101;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-family: titilliumlight;
+  font-size: 13px;
+}
+
+.lasApp .multiselect #textmeasure
+{
+  position: absolute;
+  left : -999em;
+  whiteSpace: nowrap;
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+.lasApp .multiselect input
+{
+  padding: 0 2px 0 5px;
+}
+
+.lasApp .multiselect .placeHolder
+{
+  padding: 0 5px;  
+}
+
+.lasApp .multiselect-dropdown
+{
+  max-height: 600px;
+  overflow-y: auto;  
+}
+
+.lasApp .multiselect .multiselect-dropdown-button
+{
+  width: 18px;
+  height: 25px;
+  padding-right: 2px;
+  cursor: pointer;
+}
+
+.lasApp .multiselect.readonly .multiselect-dropdown-button{
+	cursor: default;
+}
+
+.lasApp .multiselect .multiselect-dropdown-button:before
+{
+  font-family: multiselect;
+  content: @icon-down;
+  display: inline-block;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease;
+  -o-transition: -o-transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+
+.lasApp .multiselect.combobox-opened .multiselect-dropdown-button:before
+{
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -moz-transition: -moz-transform 0.5s ease;
+  -o-transition: -o-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+.lasApp .multiselect[mode='datePicker'] .multiselect-dropdown-button:before
+{
+	content: @icon-calendar;
+}
+
+@font-face {
+  font-family: 'multiselect';
+  src: url('./font/fontello/multiselect.eot?52435856');
+  src: url('./font/fontello/multiselect.eot?52435856#iefix') format('embedded-opentype'),
+       url('./font/fontello/multiselect.woff?52435856') format('woff'),
+       url('./font/fontello/multiselect.ttf?52435856') format('truetype'),
+       url('./font/fontello/multiselect.svg?52435856#multiselect') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@icon-down: '\e801';
+@icon-calendar: '\e800';
+

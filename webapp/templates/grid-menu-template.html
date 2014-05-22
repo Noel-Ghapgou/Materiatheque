@@ -1,0 +1,22 @@
+<div ng-show="(showColumnMenu || showFilter) && hasGridData()"  class="ngHeaderButton" ng-click="toggleShowMenu()" ng-style="mnuButtonPlaceHolderStyle()">
+	<div class="ngHeaderButtonArrow" ></div>
+</div>
+<div ng-show="showMenu" class="ngColMenu ng-hide">
+	<div ng-show="showFilter">
+		<input placeholder="{{i18n.ngSearchPlaceHolder}}" type="text" ng-model="filterText"/>
+	</div>
+	<div ng-show="showColumnMenu">
+		<span class="ngMenuText">{{i18n.ngMenuText}}</span>
+		<ul class="ngColList">
+			<li class="ngColListItem" ng-repeat="col in columns | filter: { $: '!field' }">
+				<label class="checkBoxLabel" ng-class="{checked: col.visible}">
+					<input ng-disabled="col.pinned" type="checkbox" class="ngColListCheckbox" ng-model="col.visible"/>
+					{{col.displayName}}</label><a title="Group By" ng-class="col.groupedByClass()" ng-show="col.groupable && col.visible" ng-click="groupBy(col)"></a><span class="ngGroupingNumber" ng-show="col.groupIndex > 0">{{col.groupIndex}}</span>
+			</li>
+			<li class="ngColListItem">
+				<label class="hand link" ng-click="resetGridOptions()" translate>ResetToDefault</label>
+			</li>
+		</ul>
+	</div>
+	<div class="colMenuArrow"></div>
+</div>

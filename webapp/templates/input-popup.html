@@ -1,0 +1,11 @@
+<div class="units-row">
+	<titlebox text="{{popupTitle}}" mode="popup" on-close="$modalSuccess()"></titlebox>
+
+	<input id="detail" class="unit-100" ng-model="popupInfos.text"></input>
+	
+	<div class="elm-margin">
+		<a class="button unit-50 hand" ng-click="$modalSuccess()" translate>Save</a>
+		<a class="button unit-50 hand" ng-click="$modalCancel()" translate>Cancel</a>
+	</div>
+	</div>
+</div>

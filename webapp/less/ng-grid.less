@@ -1,0 +1,297 @@
+/* ng-grid style overrides */
+
+.black-shadow {
+  box-shadow: 0px 4px 5px rgba(0,0,0,0.05);
+}
+
+.matApp .ngTopPanel {
+	border: none;
+}
+
+.matApp .ngTopPanel {
+	background: none;
+}
+
+.matApp .ngHeaderCell {
+	background-color: rgba(255,255,255,0.1);
+	box-sizing: border-box;
+}
+
+.matApp .ngHeaderCell .ngHeaderText{
+	font-family: titilliumlight;
+}
+
+.matApp .ngHeaderContainer {
+	font-weight: inherit;
+}
+
+.matApp .ngVerticalBarVisible {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.matApp .ngGrid {
+	background-color: transparent;
+	color: @foreColor;
+}
+
+.matApp .ngRow {
+	color: rgba(0,0,0,0.8);
+	color: black;
+	padding: 1px 0px 0px 0px;
+	box-sizing: border-box;
+	border: none;
+	font-family: titilliumlight;
+	font-size: 13px;
+}
+
+.matApp .ngRow.even {
+	background: none;
+}
+
+.matApp .ngRow.odd {
+	background: none;
+}
+
+.matApp .ngRow.even .innerRow {
+	background-color: rgba(255,255,255,0.55);
+}
+
+.matApp .ngRow.odd .innerRow {
+	background-color: rgba(255,255,255,0.6);
+}
+
+.matApp .ngRow.selected .innerRow {
+	background-color: rgba(0,0,0,0.4);
+	color: rgba(255,255,255,1);
+}
+
+.matApp .ngAggregate{
+	background-color: rgba(255,255,255,0.8);
+	color: rgba(0,0,0,0.5);
+	border: none;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+
+.matApp .ngAggregateText,
+.matApp .ngAggArrowCollapsed,
+.matApp .ngAggArrowExpanded{
+	position: relative;
+	display: inline-block;
+	top: 0;
+}
+
+.matApp .ngAggArrowCollapsed{
+	border-left-color: rgba(0,0,0,0.6);
+}
+
+.matApp .ngAggArrowExpanded{
+	border-bottom-color: rgba(0,0,0,0.6);
+}
+
+.matApp .ngFooterPanel {
+	display: none;
+}
+
+.matApp .grid-footer{
+	margin-bottom: 0.7em;
+	color: rgba(255,255,255,0.5);
+}
+
+.matApp .grid-footer .ngLabel{
+	margin-left: 1em;
+}
+
+.matApp .grid-footer .ngLabel:first-child{
+	margin-left: 0px;
+}
+
+.matApp .ngCell {
+	background: none;
+}
+ 
+.matApp .resultdocgrid .innerRow .ngCell{
+	padding: 5px 7px;
+}
+
+.matApp .resultdocgrid .innerRow .ngCell:first-child:before{
+	padding-left: 17px;
+	content: '';
+}
+
+.matApp .resultdocgrid .innerRow[class*="annot-"] .ngCell:first-child:before{
+	font-family: fontello;
+	content: @iconAnnot;
+	padding-right: 7px;
+	padding-left: 0px;
+	font-size: 14px;
+	opacity: .2;
+}
+
+.matApp .resultdocgrid .innerRow.annot-2 .ngCell:first-child:before{
+	opacity: 1;
+}
+ 
+/* Grid menu */
+.matApp .ngHeaderButton{
+	background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+	border-radius: 0;
+	border: none;
+	top: 0px;
+	right: 0px;
+}
+
+.matApp .ngHeaderButtonArrow{
+	border: none;
+	background-image: url(images/cross.png);
+	width: 9px;
+	height: 9px;
+	.transitionTransform(ease 0.1s);
+	margin: 8px auto 0px auto;
+	left: 3px;
+}
+
+.matApp .colMenuBackdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 130;
+}
+
+.matApp .ngColMenu {
+	top: 0px;
+	padding: 0.5em;
+	border: none;
+	background-color: @overBackgroundColor;
+	right: 25px;
+	border-radius: 0px;
+	color: @overForeColor;
+	.black-shadow;
+	z-index: 131;
+}
+
+.matApp .ngColMenu .colMenuArrow{
+	position: absolute;
+	top: 7px;
+	right: -10px;
+	border-left: 10px solid @overBackgroundColor;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	box-sizing: border-box;
+}
+
+.matApp .ngColMenu.ng-hide-remove{
+	.transition(all ease-out 0.2s);
+	display: block !important;
+	/* Origin values */
+	.transform-origin(105%, 50%);
+	.transform(rotateY(-90deg));
+	opacity: .2;
+}
+
+.matApp .ngColMenu.ng-hide-remove.ng-hide-remove-active {
+	/* Destination values */
+	.transform-origin(105%, 50%);
+	.transform(rotateY(0deg));
+	opacity: 1;
+}
+
+.matApp .ngColMenu.ng-hide-add {
+	.transition(all ease-in 0.1s);
+	display: block !important;
+	/* Origin values */
+	.transform-origin(105%, 50%);
+	.transform(rotateY(0deg));
+	opacity: 1;
+}
+
+.matApp .ngColMenu.ng-hide-add.ng-hide-add-active{
+	/* Destination values */
+	.transform-origin(105%, 50%);
+	.transform(rotateY(-90deg));
+	opacity: .2;
+}
+
+.matApp .ngGrid .ngColMenu input[type="checkbox"]{
+	/*vertical-align: middle;*/
+	display: none;
+}
+.matApp .ngGrid .ngColMenu .ngColList{
+	margin-left: 1.5em;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+.matApp .ngGrid .ngColMenu .ngColList .ngColListItem{
+	line-height: 20px;
+	font-size: 12px;
+	left: 0px;
+	right: 0px;
+}
+.matApp .checkBoxLabel{
+	padding-left: 15px;
+	padding-right: 23px;
+}
+
+.matApp .checkBoxLabel:before {
+  /* check box */
+  content: '';  
+  position: absolute;  
+  left:0; 
+  top: 4px;  
+  width: 9px; 
+  height: 9px; 
+  border: 1px solid @overInactiveForeColor;  
+  .transition(border ease .2s);
+}
+
+.matApp .checkBoxLabel.checked:before {
+	.transition(border ease .2s);
+  	border: 1px solid @overForeColor;  
+}
+
+.matApp  .checkBoxLabel:after{
+  /* check mark */
+  content: @iconCheck;  
+  font-family: fontello;
+  position: absolute;  
+  top: 0px; 
+  left: 2px;  
+  font-size: 10px;  
+  .transition(opacity ease .2s); 
+  opacity: 0; 
+} 
+
+.matApp .checkBoxLabel.checked:after{
+	.transition(opacity ease .2s);
+	opacity: 1;
+}
+
+.matApp .ngGroupIcon,
+.matApp .ngGroupIcon:hover,
+.matApp .ngGroupedByIcon,
+.matApp .ngGroupedByIcon:hover{
+	background-image: none;
+	color: @overForeColor;
+	cursor: pointer;
+	right: 5px;
+}
+.matApp .ngGroupIcon:after,
+.matApp .ngGroupedByIcon:after{
+	font-family: fontello;
+	font-size: 11px;
+	content: @iconListAdd;
+	position: absolute;
+	left: 3px;
+	top: -1px;
+}
+
+.matApp .ngGroupedByIcon:after{
+	font-weight: bold;
+}
+
+.matApp .ngGroupingNumber{
+	top: 0px;
+	right: -2px;
+}
