@@ -3,8 +3,8 @@
 	"serviceRootUrl": "http://localhost:8000",
 	"appInfos": {
 		"app": "MAT",
-		"version": "0.1",
-		"pageTitle": "MAT 0.1",
+		"version": "0.1.0",
+		"pageTitle": "MAT 0.1.0",
 		"productTitle1": "",
 		"productTitle2": "",
 		"productInfo": ""
