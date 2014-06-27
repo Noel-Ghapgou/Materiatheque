@@ -1164,3 +1164,31 @@
 [2014-06-27 13:44:00.054] [INFO] [default] - dooWinxD_FfY6AgDI3Il client connected
 [2014-06-27 13:44:03.294] [INFO] [default] - dooWinxD_FfY6AgDI3Il request search
 [2014-06-27 13:44:55.856] [INFO] [default] - dooWinxD_FfY6AgDI3Il client disconnected
+[2014-06-27 14:32:29.097] [INFO] [default] - Http server listening on port 8000
+[2014-06-27 14:32:45.459] [DEBUG] [default] - 127.0.0.1 - - "GET / HTTP/1.1" 500 1055 "" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:43.793] [INFO] [default] - Http server listening on port 8000
+[2014-06-27 14:35:52.730] [DEBUG] [default] - 127.0.0.1 - - "GET / HTTP/1.1" 304 - "" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:52.740] [DEBUG] [default] - 127.0.0.1 - - "GET /css/app.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:52.742] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/jquery/css/jquery-ui.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:52.746] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/kube/css/kube.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:52.747] [DEBUG] [default] - 127.0.0.1 - - "GET /css/font/titillium/fonts.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:52.747] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/require/require.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:52.748] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/jquery/js/jquery.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.168] [DEBUG] [default] - 127.0.0.1 - - "GET /css/font/titillium/titillium-regular-webfont.eot? HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.192] [DEBUG] [default] - 127.0.0.1 - - "GET /js/main.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.196] [DEBUG] [default] - 127.0.0.1 - - "GET /config.json HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.203] [DEBUG] [default] - 127.0.0.1 - - "GET /js/app.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.205] [DEBUG] [default] - 127.0.0.1 - - "GET /js/routes.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.206] [DEBUG] [default] - 127.0.0.1 - - "GET /js/providers/route-resolver.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.207] [DEBUG] [default] - 127.0.0.1 - - "GET /js/services/proxy-service.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.210] [DEBUG] [default] - 127.0.0.1 - - "GET /js/providers/socket-provider.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.212] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/angular/angular.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.245] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/angular/angular-route.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.246] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/ng-grid/ng-grid.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.284] [DEBUG] [default] - 127.0.0.1 - - "GET /lib/ng-grid/css/ng-grid.css HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.285] [DEBUG] [default] - 127.0.0.1 - - "GET /templates/search.html HTTP/1.1" 304 - "http://localhost:8000/search" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.289] [DEBUG] [default] - 127.0.0.1 - - "GET /js/controllers/search-controller.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.291] [DEBUG] [default] - 127.0.0.1 - - "GET /js/services/search-service.js HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+[2014-06-27 14:35:53.500] [INFO] [default] - aBpx1-NEE3vl8SYkUwQw client connected
+[2014-06-27 14:35:56.995] [INFO] [default] - aBpx1-NEE3vl8SYkUwQw request search
+[2014-06-27 14:36:07.593] [INFO] [default] - aBpx1-NEE3vl8SYkUwQw client disconnected
