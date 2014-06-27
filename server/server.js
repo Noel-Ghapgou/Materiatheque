@@ -48,17 +48,45 @@ function initSocketIO(httpServer)
             try {
                 switch(params.request)
                 {
+                    case 'login':
+                        params.status = 'ok';
+                        params.data = [{
+                            id : 1,
+                            desc : "toto____1"
+                        }, {
+                            id : 2,
+                            desc : "tata____1"
+                        }, {
+                            id : 3,
+                            desc : "titi____1"
+                        }];
+                        break;
+
+                    case 'index':
+                        params.status = 'ok';
+                        params.data = [{
+                            id : 1,
+                            desc : "toto____2"
+                        }, {
+                            id : 2,
+                            desc : "tata____2"
+                        }, {
+                            id : 3,
+                            desc : "titi____2"
+                        }];
+                        break;
+
                     case 'search':
                         params.status = 'ok';
                         params.data = [{
                             id : 1,
-                            desc : "toto"
+                            desc : "toto____3"
                         }, {
                             id : 2,
-                            desc : "tata"
+                            desc : "tata____3"
                         }, {
                             id : 3,
-                            desc : "titi"
+                            desc : "titi____3"
                         }];
                         break;
 
