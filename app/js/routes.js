@@ -18,7 +18,12 @@ define(['app'], function(app)
 		// Define routes - controllers will be loaded dynamically
 		var route = routeResolverProvider.route;
 
+		// route.resolve(page, controller, [dependencies], [css])
+		$routeProvider.when(config.page.login, route.resolve('loginTemplate', 'loginController'));
+
 		$routeProvider.when(config.page.search, route.resolve('searchTemplate', 'searchController', ['searchController'], ['gridStyle']));
+		
+		$routeProvider.when(config.page.logout, route.resolve('logoutTemplate', 'logoutController'));
 
 		$routeProvider.otherwise({
 			redirectTo : config.page.search

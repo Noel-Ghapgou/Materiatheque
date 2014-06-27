@@ -1,0 +1,30 @@
+{
+	"baseUrl": "/",
+	"serviceRootUrl": "http://localhost:8000",
+	"appInfos": {
+		"app": "MAT",
+		"version": "0.1.0",
+		"pageTitle": "MAT 0.1.0",
+		"productTitle1": "",
+		"productTitle2": "",
+		"productInfo": ""
+	},
+    "login": {
+        "defaultUser": "system02",
+        "defaultPassord": "sa",
+        "loginUrl": "{serviceRootUrl}login",
+        "logoutUrl": "{serviceRootUrl}logout"
+    },	
+	"search": {
+		"searchUrl": "{serviceRootUrl}search"
+	},
+	"page": {
+		"search": "{baseUrl}search"
+	},
+    "page": {
+        "login": "{baseUrl}login",
+        "search": "{baseUrl}search",
+        "home": "{baseUrl}search",
+        "logout": "{baseUrl}logout"
+    }	
+}
